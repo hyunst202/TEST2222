@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="짧은 점심시간을 위한 한영 메뉴 추천. Quick lunch picks by time, budget and food preference.">
+  <meta name="theme-color" content="#faf8f3">
+  <title>Lunch Break · 오늘 점심, 고민은 짧게</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<a class="skip" href="#filters">추천 조건으로 이동 · Skip to preferences</a>
+<div class="shell">
+  <header><a class="brand" href="/"><span aria-hidden="true">✳</span> lunch break<span class="brand-dot">.</span></a><span class="header-note">작은 점심시간, 더 여유롭게 <span lang="en">A little less deciding. A little more living.</span></span><span class="language">한국어 <i>/</i> EN</span></header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow"><span class="dot"></span> YOUR MIDDAY, MADE EASY</p><h1>오늘 점심,<br>고민은 <span>짧게.</span></h1><p class="hero-en" lang="en">Less deciding. More lunching.</p><p class="intro">시간과 예산에 맞춰, 맛있는 선택만 모았어요.<br><span lang="en">Find a lunch that fits your time, budget & mood.</span></p></div>
+      <div class="hero-illustration" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="lunch-note">a little lunch,<br>a happier day <span>↗</span></div><div class="plate"><span>🍱</span></div><span class="spark s1">✧</span><span class="spark s2">✳</span><span class="floating-label">점심은 즐겁게 <span>Make time for a good bite.</span></span></div>
+    </section>
+    <div class="steps"><span><b>01</b> 조건 고르기 <small>Set your preferences</small></span><i>→</i><span><b>02</b> 추천 또는 뽑기 <small>Pick or play</small></span><i>→</i><span><b>03</b> 맛있는 점심! <small>Enjoy your break</small></span></div>
+    <div class="workspace">
+      <aside class="filter-panel" id="filters"><p class="eyebrow">A LUNCH THAT FITS YOU</p><h2>오늘의 점심 조건</h2><p class="section-en" lang="en">Your break. Your preferences.</p>
+        <form action="/#results" method="get">
+          <div class="form-pair"><div><label for="minutes">남은 점심시간 <span lang="en">Time available</span></label><select id="minutes" name="minutes">$minutes</select></div><div><label for="budget">한 끼 예산 <span lang="en">Budget · KRW</span></label><select id="budget" name="budget">$budget</select></div></div>
+          <label for="cuisine">어떤 음식이 좋아요? <span lang="en">Cuisine</span></label><select id="cuisine" name="cuisine">$cuisine</select>
+          <label for="diet">식사 취향 <span lang="en">Food preference</span></label><select id="diet" name="diet">$diet</select>
+          <label class="checkbox"><input type="checkbox" name="mild" value="true" $mild><span>맵지 않은 음식만 <small lang="en">Keep it mild, please</small></span><span aria-hidden="true">🌿</span></label>
+          <details><summary>이동·대기 시간 조정 <span lang="en">Travel & wait</span></summary><div class="form-pair"><div><label for="travel">왕복 이동 <span lang="en">Round trip</span></label><select id="travel" name="travel">$travel</select></div><div><label for="wait">예상 대기 <span lang="en">Expected wait</span></label><select id="wait" name="wait">$wait</select></div></div></details>
+          <button class="primary" type="submit" name="mode" value="quick">빠르게 추천받기 <span lang="en">Quick picks ↗</span></button>
+          <button class="draw-button" type="submit" name="mode" value="draw"><span aria-hidden="true">🎲</span> 운명에 맡겨 볼까요? <small lang="en">Surprise me!</small></button>
+          <p class="filter-note">기본 왕복 10분 + 대기 5분을 포함해 계산해요.<br><span lang="en">Includes 10 min travel + 5 min wait by default.</span></p>
+        </form>
+      </aside>
+      <section class="results $result_class" id="results" aria-labelledby="results-title"><div class="results-heading"><div><p class="eyebrow">GOOD FOOD, LESS FUSS</p><h2 id="results-title">$title</h2><p class="section-en" lang="en">$subtitle</p></div><span class="match-count">$count <span>후보<br>matches</span></span></div>
+        <div class="cards">$cards</div>
+        $extra
+        <div class="play-again"><div><span aria-hidden="true">🎲</span><p>아직 고민되나요?<small lang="en">Let a little luck decide.</small></p></div><a href="$retry">한 번 더 뽑기 <span lang="en">Draw again ↗</span></a></div>
+        <div class="honest-note"><b>알고 골라요 · A quick heads-up</b><p>가격·시간은 예시 예상값이며 실제 식당 정보가 아닙니다. 이동·대기와 재료는 식당에 확인하세요. 채식 메뉴는 해당 재료와 소스로 주문하는 선택지입니다.<span lang="en">Prices and times are illustrative estimates, not live restaurant data. Confirm travel, queues, ingredients and dietary preparation with the restaurant.</span></p></div>
+      </section>
+    </div>
+    <section class="bottom-note"><span aria-hidden="true">☀</span><p>고르는 시간은 줄이고, 쉬는 시간은 늘려요.<span lang="en">Spend your break enjoying lunch, not choosing it.</span></p><span aria-hidden="true">✧</span></section>
+  </main>
+  <footer><a class="brand" href="/">lunch break.</a><span>오늘도 맛있는 휴식 되세요. <span lang="en">Have a lovely lunch.</span></span><a href="/docs">API</a></footer>
+</div>
+</body>
+</html>
